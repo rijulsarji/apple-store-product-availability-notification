@@ -35,6 +35,7 @@ const transporter = nodemailer.createTransport({
  * Sends an email notification about the availability.
  */
 async function sendAvailabilityEmail(storeName, modelName) {
+  console.log("MAIL INFO: ", process.env.GMAIL_USER, RECIPIENT_EMAIL);
   const mailOptions = {
     from: process.env.GMAIL_USER,
     to: RECIPIENT_EMAIL,
