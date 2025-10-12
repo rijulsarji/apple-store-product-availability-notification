@@ -73,7 +73,7 @@ async function checkAvailability() {
     console.info("data", storeInfo.partsAvailability[SKU_ID]);
 
     const isAvailable =
-      !storeInfo.partsAvailability[SKU_ID].buyability.isBuyable;
+      storeInfo.partsAvailability[SKU_ID].buyability.isBuyable;
 
     if (isAvailable) {
       console.log(
